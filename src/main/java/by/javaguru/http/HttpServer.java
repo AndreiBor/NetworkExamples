@@ -39,7 +39,7 @@ public class HttpServer {
              var inputStream = new DataInputStream(socket.getInputStream());
              var outputStream = new DataOutputStream(socket.getOutputStream())) {
             Thread.sleep(1000);
-            System.out.println(new String(inputStream.readNBytes(450)));
+            System.out.println(new String(inputStream.readNBytes(400)));
 
             byte[] body = Files.readAllBytes(Path.of("src/main/resources/example.html"));
             outputStream.write("""
